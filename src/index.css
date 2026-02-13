@@ -2,10 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
+html {
+  scroll-behavior: smooth;
 }
 
+
 body {
-  @apply m-0 min-h-screen bg-[#0f0f0f] text-white antialiased;
+  background-color: #0f0f0f;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+/* STOP saat hover */
+.animate-scroll:hover {
+  animation-play-state: paused;
 }

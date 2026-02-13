@@ -1,11 +1,29 @@
-import Navbar from './Navbar';
-import Hero from './Hero';
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import Clients from "./Clients";
+import Stats from "./Stats";
+import Reasons from "./Reasons";
+import WhyChoose from "./WhyChoose";
+import Workflow from "./Workflow";
+import Projects from "./Projects";
+import Services from "./Services";
+import Faq from "./Faq";
+import Footer from "./Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-white">
+    <>
       <Navbar />
       <Hero />
-    </div>
+      <Clients />
+      <Stats />
+      <Reasons />
+      <WhyChoose />
+      <Workflow />
+      <Projects />
+      <Services />
+      <Faq />
+      <Footer />
+    </>
   );
 }

@@ -1,34 +1,104 @@
-const menuItems = ['HOME', 'LAYANAN', 'PORTOFOLIO', 'PAKET'];
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   return (
-    <header className="border-b border-white/10">
-      <nav
-        className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-4 py-5 sm:px-8"
-        aria-label="Main navigation"
-      >
-        <a href="#" className="text-xl font-extrabold tracking-[0.2em] sm:text-2xl">
-          <span className="text-brandYellow">LOCA</span>
-          <span className="text-brandBlue">TIV</span>
-        </a>
+    <nav className="w-full bg-[#0f0f0f] text-white">
 
-        <ul className="hidden items-center gap-6 text-sm font-medium tracking-wide text-white/80 md:flex">
-          {menuItems.map((item) => (
-            <li key={item}>
-              <a href="#" className="transition hover:text-white">
-                {item}
-              </a>
-            </li>
-          ))}
+      <div
+        className="
+          max-w-7xl
+          mx-auto
+          flex
+          items-center
+          justify-between
+          py-2
+          px-6
+        "
+      >
+
+        {/* Logo */}
+        <div className="flex items-center">
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-[70px] mt-[40px]"
+          />
+        </div>
+
+        {/* Menu + Button (Digabung) */}
+        <ul
+          className="
+            hidden
+            md:flex
+            items-center
+            gap-5
+            text-l
+            font-medium
+            -mt-[10px]
+             mr-[200px]
+             h-[70px] mt-[40px]
+          "
+        >
+          <li>
+    <a
+      href="#home"
+      className="hover:text-blue-400 cursor-pointer"
+    >
+      HOME
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="#reasons"
+      className="hover:text-blue-400 cursor-pointer"
+    >
+      LAYANAN
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="#projects"
+      className="hover:text-blue-400 cursor-pointer"
+    >
+      PORTOFOLIO
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="#services"
+      className="hover:text-blue-400 cursor-pointer"
+    >
+      PAKET
+    </a>
+  </li>
+
+          {/* Button Kontak */}
+          <li>
+          <a href="#contact">
+ <button
+              className="
+                bg-blue-500
+                hover:bg-blue-600
+                text-white
+                px-8
+                py-2
+                text-sm
+                font-semibold
+                ml-4
+              "
+            >
+              KONTAK
+            </button>
+
+          </a>
+           
+          </li>
         </ul>
 
-        <button
-          type="button"
-          className="rounded-full bg-brandBlue px-5 py-2 text-sm font-semibold text-white transition hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-brandBlue focus:ring-offset-2 focus:ring-offset-[#0f0f0f]"
-        >
-          KONTAK
-        </button>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 }
