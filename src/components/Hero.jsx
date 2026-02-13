@@ -2,14 +2,15 @@ import decor from "../assets/decor1-1.png";
 
 export default function Hero() {
   return (
-    <section 
+<section 
      id="home"
     className="
   relative
   bg-[#0f0f0f]
   text-white
   overflow-hidden
-  h-[calc(95vh-100px)]
+  min-h-[calc(100vh-80px)]
+  lg:h-[calc(95vh-100px)]
   flex
   items-start
 ">
@@ -21,11 +22,15 @@ export default function Hero() {
         alt="Decor"
         className="
   absolute
-  top-[280px]
-  left-[230px]
-  w-[60px]
-  md:w-[100px]
+  top-[220px]
+  left-[20px]
+  w-[30px]
+  md:top-[210px]
+  md:left-[80px]
+  md:w-[50px]
   lg:w-[65px]
+  lg:top-[280px]
+  lg:left-[230px]
 "
 
       />
@@ -35,11 +40,14 @@ export default function Hero() {
         alt="Decor"
         className="
   absolute
-  top-[30px]
-  right-[309px]
-  w-[60px]
-  md:w-[100px]
+  top-[25px]
+  right-[20px]
+  w-[24px]
+  md:top-[20px]
+  md:right-[90px]
+  md:w-[40px]
   lg:w-[30px]
+  lg:right-[309px]
 "
       />
 
@@ -48,30 +56,34 @@ export default function Hero() {
         alt="Decor"
         className="
   absolute
-  top-[338px]
-  right-[405px]
-  w-[60px]
-  md:w-[100px]
+  top-[330px]
+  right-[15px]
+  w-[20px]
+  md:top-[300px]
+  md:right-[60px]
+  md:w-[30px]
   lg:w-[20px]
+  lg:right-[405px]
+  lg:top-[338px]
 "
       />
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-0 py-0 text-center w-full">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-0 py-8 lg:py-0 text-center w-full">
 
         {/* Subtitle */}
-        <p className="text-[24px] mb-4 mt-10 opacity-90">
+        <p className="text-base md:text-xl lg:text-[24px] mb-3 md:mb-4 mt-2 md:mt-6 lg:mt-10 opacity-90">
           Dokumentasi Event Specialist
         </p>
 
         {/* Title */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-4 md:mb-6">
           JASA DOKUMENTASI <br />
           EVENT FOTO & VIDEO
         </h1>
 
         {/* Description */}
-        <p className="max-w-2xl mx-auto text-gray-300 mb-10">
+        <p className="max-w-2xl mx-auto text-sm md:text-base text-gray-300 mb-8 md:mb-10 px-2">
           Menangani dokumentasi Professional foto dan video <br />
           untuk berbagai jenis event Kamu.
         </p>
@@ -80,13 +92,13 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
         
         <a href="https://wa.me/6285175394358">
-   <button className="bg-blue-500 hover:bg-blue-600 px-8 py-3 font-semibold">
+   <button className="bg-blue-500 hover:bg-blue-600 px-6 md:px-8 py-3 text-sm md:text-base font-semibold w-full sm:w-auto">
             Booking Tim Dokumentasi
           </button>
         </a>
        
 <a href="https://wa.me/6285175394358">
-  <button className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-3 font-semibold transition">
+  <button className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-6 md:px-8 py-3 text-sm md:text-base font-semibold transition w-full sm:w-auto">
             Pelajari Selengkapnya
           </button>
 </a>

@@ -4,33 +4,25 @@ import decorBottom from "../assets/decor2-5.png";
 
 export default function Workflow() {
   return (
-    <section className="relative bg-white py-[80px] overflow-hidden">
-
-      {/* Decor Kiri Atas */}
+    <section className="relative bg-white py-[50px] md:py-[65px] lg:py-[80px] overflow-hidden">
       <img
         src={decorTop}
         alt="Decor Top"
-        className="absolute top-[130px] left-[125px] w-[20px]"
+        className="absolute top-[90px] left-[25px] md:left-[60px] lg:top-[130px] lg:left-[125px] w-[14px] md:w-[18px] lg:w-[20px]"
       />
 
-      {/* Decor Kanan Bawah */}
       <img
         src={decorBottom}
         alt="Decor Bottom"
-        className="absolute bottom-[130px] right-[300px] w-[30px]"
+        className="absolute bottom-[70px] right-[20px] md:right-[100px] lg:bottom-[130px] lg:right-[300px] w-[20px] md:w-[24px] lg:w-[30px]"
       />
 
-      <div className="max-w-7xl mx-auto px-6">
-
-        {/* Title */}
-        <h2 className="text-center text-[50px] font-bold mb-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <h2 className="text-center text-[32px] md:text-[42px] lg:text-[50px] font-bold mb-10 md:mb-14 lg:mb-16">
           CARA KERJA KAMI
         </h2>
 
-        {/* List */}
         <div className="space-y-8">
-
-          {/* ITEM */}
           {[
             {
               num: "01.",
@@ -48,56 +40,21 @@ export default function Workflow() {
               desc: "Hasil sesuai brief, siap digunakan.",
             },
           ].map((item, i) => (
-            <div
-              key={i}
-              className="flex items-start gap-10"
-            >
-
-              {/* Icon + Number */}
-             <div className="relative w-[180px] h-[70px ] flex-shrink-0 -ml-6">
-
-
-                {/* Background Icon */}
-                <img
-                  src={iconBg}
-                  alt="Icon"
-                  className="w-full h-full object-contain"
-                />
-
-                {/* Number */}
-                <span
-                  className="
-                    absolute
-                    inset-0
-                    flex
-                    items-center
-                    justify-center
-                    text-white
-                    font-bold
-                    text-lg
-                  "
-                >
+            <div key={i} className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8 lg:gap-10">
+              <div className="relative w-[130px] sm:w-[160px] lg:w-[180px] h-[56px] sm:h-[62px] lg:h-[70px] flex-shrink-0 sm:-ml-2 lg:-ml-6">
+                <img src={iconBg} alt="Icon" className="w-full h-full object-contain" />
+                <span className="absolute inset-0 flex items-center justify-center text-white font-bold text-base lg:text-lg">
                   {item.num}
                 </span>
-
               </div>
 
-              {/* Text */}
               <div>
-                <h3 className="font-bold  text-2xl md:text-3xl">
-                  {item.title}
-                </h3>
-
-                <p className="text-gray-600 leading-relaxed max-w-xl">
-                  {item.desc}
-                </p>
+                <h3 className="font-bold text-xl md:text-2xl lg:text-3xl">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed max-w-xl text-sm md:text-base">{item.desc}</p>
               </div>
-
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

@@ -93,20 +93,20 @@ export default function Stats() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#0f0f0f] text-white py-16"
+      className="bg-[#0f0f0f] text-white py-12 md:py-14 lg:py-16"
     >
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-center">
 
           {/* Item 1 */}
           <div>
-            <h2 className="text-yellow-400 text-5xl md:text-6xl font-semibold mb-3">
+            <h2 className="text-yellow-400 text-4xl md:text-5xl lg:text-6xl font-semibold mb-3">
               {projects}++
             </h2>
 
-            <p className="text-lg font-semibold leading-snug">
+            <p className="text-base md:text-lg font-semibold leading-snug">
               Project <br /> Handled
             </p>
           </div>
@@ -114,11 +114,11 @@ export default function Stats() {
 
           {/* Item 2 */}
           <div>
-            <h2 className="text-yellow-400 text-5xl md:text-6xl font-semibold mb-3">
+            <h2 className="text-yellow-400 text-4xl md:text-5xl lg:text-6xl font-semibold mb-3">
               {teams}++
             </h2>
 
-            <p className="text-lg font-semibold leading-snug">
+            <p className="text-base md:text-lg font-semibold leading-snug">
               Teams Across <br /> Regions
             </p>
           </div>
@@ -126,11 +126,11 @@ export default function Stats() {
 
           {/* Item 3 */}
           <div>
-            <h2 className="text-yellow-400 text-5xl md:text-6xl font-semibold mb-3">
+            <h2 className="text-yellow-400 text-4xl md:text-5xl lg:text-6xl font-semibold mb-3">
               {equipment}%
             </h2>
 
-            <p className="text-lg font-semibold leading-snug">
+            <p className="text-base md:text-lg font-semibold leading-snug">
               In-House <br /> Equipment
             </p>
           </div>

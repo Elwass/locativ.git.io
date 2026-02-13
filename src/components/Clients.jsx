@@ -6,7 +6,7 @@ export default function Clients() {
   const logos = [logo1, logo2, logo3];
 
   return (
-    <section className="bg-white py-10 overflow-hidden">
+    <section className="bg-white py-8 md:py-10 overflow-hidden">
       <div className="relative w-full">
 
         {/* Track */}
@@ -19,7 +19,7 @@ export default function Clients() {
             return (
               <div
                 key={i}
-                className="flex items-center justify-center min-w-[300px] px-16"
+                className="flex items-center justify-center min-w-[180px] md:min-w-[240px] lg:min-w-[300px] px-8 md:px-12 lg:px-16"
               >
                 <img
                   src={logo}
@@ -27,7 +27,7 @@ export default function Clients() {
                   className={`
                     object-contain
                     grayscale hover:grayscale-0 transition
-                    ${isMaybank ? "h-28 md:h-32" : "h-16 md:h-20"}
+                    ${isMaybank ? "h-16 md:h-24 lg:h-28" : "h-10 md:h-14 lg:h-16"}
                   `}
                 />
               </div>
